@@ -12,14 +12,32 @@ import string
 
 
 def string_upper(s: str) -> str:
+    """
+    Возвращает строку, в которой все буквы латинского алфавита из исходной строки преобразованы в заглавные символы.
+
+    :param s: исходная строка
+    :return: преобразованная строка
+    """
     return s.translate(str.maketrans(string.ascii_lowercase, string.ascii_uppercase))
 
 
 def string_lower(s: str) -> str:
+    """
+    Возвращает строку, в которой все буквы латинского алфавита из исходной строки преобразованы в прописные символы.
+
+    :param s: исходная строка
+    :return: преобразованная строка
+    """
     return s.translate(str.maketrans(string.ascii_uppercase, string.ascii_lowercase))
 
 
 def string_swapcase(s: str) -> str:
+    """
+    Возвращает строку, в которой все заглавные буквы латинского алфавита становятся прописными и наоборот.
+
+    :param s: исходная строка
+    :return: преобразованная строка
+    """
     return s.translate(str.maketrans(string.ascii_lowercase + string.ascii_uppercase,
                                      string.ascii_uppercase + string.ascii_lowercase))
 
