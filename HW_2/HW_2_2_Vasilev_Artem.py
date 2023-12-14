@@ -55,5 +55,5 @@ def addition(base_1: int, number_1: str, number_2: str, base_2: int) -> str:
     return convert_from_decimal(sum_value, base_2)
 
 
-print(addition(2, '1001', '1111', 16))
-print(addition(16, '1E', 'A', 2))
+print(addition(2, '1001', '1111', 16))  # 18
+print(addition(16, '1E', 'A', 2))  # 101000
