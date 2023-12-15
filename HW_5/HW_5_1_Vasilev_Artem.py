@@ -20,7 +20,7 @@ def create_function_symbol_stats(alphabet: str):
         :param sequence: последовательность для подсчета символов в ней
         :return: печатает на экран результат статистической обработки
         """
-        stats = {key: 0 for key in sorted(alphabet)}
+        stats = {key: 0 for key in sorted(alphabet)}  # сортировка множества -- плохо
         symbols = set(sequence)
 
         if not (symbols <= alphabet):
@@ -30,7 +30,7 @@ def create_function_symbol_stats(alphabet: str):
         for symbol in sorted(symbols):
             stats[symbol] = sequence.count(symbol)
         for symbol, stat in stats.items():
-            print(f'{symbol}: {stat / len(sequence):.2%}')
+            print(f'{symbol}: {stat / len(sequence):.2%}')  # прогнать на огромной последовательности
         print()
     return calculate_symbol_stats
 
